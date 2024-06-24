@@ -4,6 +4,11 @@ A chess engine written in Java. The engine finds the best move through a deep se
 
 The engine also exposes many of its internal settings that can be freely played around with to see the effects on performance and gameplay.
 
+In the source code, the most important classes with most of the important logic are
+[AlphaBeta.java](https://github.com/Jazz-Coding/JChessEngine/blob/master/src/com/jazz/engine/search/AlphaBeta.java), which handles the search logic.
+and
+[ChessController.java](https://github.com/Jazz-Coding/JChessEngine/blob/master/src/com/jazz/mvc/ChessController.java), which is the main class.
+
 
 ![java_H6WW7rM1Wh](https://github.com/Jazz-Coding/JChessEngine/assets/52354702/24edc2c4-f846-46f7-af3b-9cda244dbdd0)
 

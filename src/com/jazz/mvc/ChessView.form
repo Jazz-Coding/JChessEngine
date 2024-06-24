@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.jazz.mvc.ChessView">
+  <grid id="27dc6" binding="mainPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="28" column-count="11" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="5" left="5" bottom="5" right="5"/>
+    <constraints>
+      <xy x="20" y="20" width="1431" height="893"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="be604" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="22"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Engine Settings"/>
+        </properties>
+      </component>
+      <hspacer id="e4f8e">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="768" height="-1"/>
+            <maximum-size width="768" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <vspacer id="bca30">
+        <constraints>
+          <grid row="7" column="0" row-span="19" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="de439" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Piece Values"/>
+          <toolTipText value="The material evaluation the engine uses internally. e.g. if one side is a pawn up, and a pawn is worth 1.0, then the evaluation is +1.0."/>
+        </properties>
+      </component>
+      <component id="569a1" class="javax.swing.JFormattedTextField" binding="pawnValueTextField" custom-create="true">
+        <constraints>
+          <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <vspacer id="bc0df">
+        <constraints>
+          <grid row="27" column="9" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="4ded6" class="javax.swing.JFormattedTextField" binding="knightValueTextField" custom-create="true">
+        <constraints>
+          <grid row="18" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="3"/>
+        </properties>
+      </component>
+      <component id="24283" class="javax.swing.JFormattedTextField" binding="bishopValueTextField" custom-create="true">
+        <constraints>
+          <grid row="19" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="3.6"/>
+        </properties>
+      </component>
+      <component id="da4" class="javax.swing.JFormattedTextField" binding="rookValueTextField" custom-create="true">
+        <constraints>
+          <grid row="20" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="5.1"/>
+        </properties>
+      </component>
+      <component id="b43d2" class="javax.swing.JFormattedTextField" binding="queenValueTextField" custom-create="true">
+        <constraints>
+          <grid row="21" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="8.75"/>
+        </properties>
+      </component>
+      <component id="533d8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="17" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Pawn"/>
+        </properties>
+      </component>
+      <component id="489ba" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Knight"/>
+        </properties>
+      </component>
+      <component id="d274a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="19" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Bishop"/>
+        </properties>
+      </component>
+      <component id="979b2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="20" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Rook"/>
+        </properties>
+      </component>
+      <component id="341d9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="21" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Queen"/>
+        </properties>
+      </component>
+      <component id="6e5e5" class="javax.swing.JButton" binding="resetButton" default-binding="true">
+        <constraints>
+          <grid row="23" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="75" height="-1"/>
+            <maximum-size width="75" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="8"/>
+          <text value="Reset"/>
+        </properties>
+      </component>
+      <component id="8fd76" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Depth Limit"/>
+        </properties>
+      </component>
+      <hspacer id="41503">
+        <constraints>
+          <grid row="1" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="cf8f2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="24" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Positional Values"/>
+          <toolTipText value="Specific positional advantage checks."/>
+        </properties>
+      </component>
+      <component id="8656d" class="javax.swing.JCheckBox" binding="valueCentrePawnsCheckBox" default-binding="true">
+        <constraints>
+          <grid row="25" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Value Piece Positions"/>
+          <toolTipText value="Uses a set of position tables to value pieces depending on their position. e.g. pawns in the centre are better"/>
+        </properties>
+      </component>
+      <component id="6a545" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="22"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Engine Stats"/>
+        </properties>
+      </component>
+      <hspacer id="c79b8">
+        <constraints>
+          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="e06c8" class="javax.swing.JProgressBar" binding="ttSizeBar">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <indeterminate value="false"/>
+          <stringPainted value="false"/>
+        </properties>
+      </component>
+      <component id="5dff5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Transposition Table Size"/>
+        </properties>
+      </component>
+      <component id="373c0" class="javax.swing.JLabel" binding="depthLabel">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <text value="Depth: 0/0"/>
+          <toolTipText value="Current depth reached"/>
+        </properties>
+      </component>
+      <component id="7d2a9" class="javax.swing.JFormattedTextField" binding="kingValueTextField" custom-create="true">
+        <constraints>
+          <grid row="22" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="3"/>
+        </properties>
+      </component>
+      <component id="68192" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="22" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="King"/>
+        </properties>
+      </component>
+      <component id="e6ccd" class="javax.swing.JLabel" binding="ttSizeCounter">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="0/0"/>
+        </properties>
+      </component>
+      <hspacer id="7a399">
+        <constraints>
+          <grid row="27" column="0" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="22dab">
+        <constraints>
+          <grid row="27" column="2" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="fb34d" class="javax.swing.JLabel" binding="positionScoreLabel">
+        <constraints>
+          <grid row="8" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Positional Score:"/>
+        </properties>
+      </component>
+      <grid id="58f7f" binding="statsPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="5" left="5" bottom="5" right="5"/>
+        <constraints>
+          <grid row="9" column="4" row-span="10" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="true"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <component id="40c36" class="javax.swing.JCheckBox" binding="showMoveHighlightsCheckBox" default-binding="true">
+        <constraints>
+          <grid row="24" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Show Move Highlights"/>
+        </properties>
+      </component>
+      <component id="77d67" class="javax.swing.JButton" binding="resignButton" default-binding="true">
+        <constraints>
+          <grid row="26" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <text value="Resign"/>
+        </properties>
+      </component>
+      <component id="6b623" class="javax.swing.JCheckBox" binding="showSquareLabelsCheckBox" default-binding="true">
+        <constraints>
+          <grid row="25" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Show Square Labels"/>
+        </properties>
+      </component>
+      <component id="8a754" class="javax.swing.JLabel" binding="npsLabel">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="4"/>
+          <text value="NPS: 0/s"/>
+          <toolTipText value="Nodes evaluated per second"/>
+        </properties>
+      </component>
+      <component id="a4c64" class="javax.swing.JLabel" binding="bfLabel">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="4"/>
+          <text value="b=~0"/>
+          <toolTipText value="Effective branching factor (new nodes per ply)"/>
+        </properties>
+      </component>
+      <component id="1cd1a" class="javax.swing.JSlider" binding="depthSlider">
+        <constraints>
+          <grid row="2" column="9" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <majorTickSpacing value="5"/>
+          <maximum value="21"/>
+          <minimum value="3"/>
+          <minorTickSpacing value="1"/>
+          <paintLabels value="true"/>
+          <paintTicks value="true"/>
+          <snapToTicks value="true"/>
+          <value value="6"/>
+          <valueIsAdjusting value="false"/>
+        </properties>
+      </component>
+      <component id="7c107" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="10" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="∞"/>
+        </properties>
+      </component>
+      <component id="d0a70" class="javax.swing.JCheckBox" binding="quiescenceSearchCheckBox" default-binding="true">
+        <constraints>
+          <grid row="5" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Quiescence Search"/>
+          <toolTipText value="Performs an additional unbounded search of non-quiet moves (captures, checks, etc), which prevents the engine from making unsound captures when it reaches maximum depth."/>
+          <verticalAlignment value="0"/>
+          <verticalTextPosition value="0"/>
+        </properties>
+      </component>
+      <component id="233fa" class="javax.swing.JCheckBox" binding="alphaBetaPruningCheckBox" default-binding="true">
+        <constraints>
+          <grid row="6" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Alpha Beta Pruning"/>
+          <toolTipText value="By keeping track of minimum/maximum assured score for white and black, substantial amounts of the search tree can be pruned, dramatically speeding up the search."/>
+        </properties>
+      </component>
+      <component id="799ce" class="javax.swing.JCheckBox" binding="killerHeuristicCheckBox" default-binding="true">
+        <constraints>
+          <grid row="7" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Killer Heuristic"/>
+          <toolTipText value="Remember moves at this level that resulted in a beta cutoff during search. These will be prioritized since they may cause cutoffs again when they are considered, saving time."/>
+        </properties>
+      </component>
+      <component id="e3d72" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Number of Killers"/>
+        </properties>
+      </component>
+      <component id="b93fd" class="javax.swing.JFormattedTextField" binding="killerSizeTextField" custom-create="true">
+        <constraints>
+          <grid row="9" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="0"/>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="62b77" class="javax.swing.JCheckBox" binding="transpositionTableCheckBox" default-binding="true">
+        <constraints>
+          <grid row="10" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Transposition Table"/>
+          <toolTipText value="Remember information about positions, should they re-occur. Allows for many speedups as moves may often lead to the same board position."/>
+        </properties>
+      </component>
+      <component id="40cfd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Maximum Size (entries)"/>
+        </properties>
+      </component>
+      <component id="1ed50" class="javax.swing.JFormattedTextField" binding="ttSizeTextField" custom-create="true">
+        <constraints>
+          <grid row="12" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="100,000,000"/>
+        </properties>
+      </component>
+      <component id="cb461" class="javax.swing.JButton" binding="maxButton" default-binding="true">
+        <constraints>
+          <grid row="12" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="-1"/>
+            <maximum-size width="50" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="8"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Max"/>
+          <toolTipText value="As much as can fit in the RAM allocated."/>
+        </properties>
+      </component>
+      <component id="4ebd9" class="javax.swing.JCheckBox" binding="iterativeDeepeningCheckBox" default-binding="true">
+        <constraints>
+          <grid row="13" column="9" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Iterative Deepening"/>
+          <toolTipText value="Start by doing shallow searches (e.g. depth 2 if maximum depth is 8), the results of previous searches help inform deeper ones due to the transposition table, resulting in higher performance overall."/>
+        </properties>
+      </component>
+      <component id="964d" class="javax.swing.JButton" binding="beginButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Begin"/>
+        </properties>
+      </component>
+      <component id="876cb" class="javax.swing.JComboBox" binding="blackComboBox" custom-create="true">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ac82e" class="javax.swing.JComboBox" binding="whiteComboBox" custom-create="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="205fe" class="javax.swing.JLabel" binding="whiteCBLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="White"/>
+        </properties>
+      </component>
+      <component id="12388" class="javax.swing.JLabel" binding="blackCBLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Black"/>
+        </properties>
+      </component>
+      <component id="a01f6" class="javax.swing.JLabel" binding="setupLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="22"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Game Setup"/>
+        </properties>
+      </component>
+      <component id="8c362" class="javax.swing.JTextField" binding="fenField">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2e3f2" class="javax.swing.JLabel" binding="fenLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Game FEN (Leave blank for default)"/>
+        </properties>
+      </component>
+      <scrollpane id="274e9" binding="scrollPane">
+        <constraints>
+          <grid row="26" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="400" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <autoscrolls value="true"/>
+          <verticalScrollBarPolicy value="20"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="5c90c" class="javax.swing.JTextArea" binding="PGN_Pane">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+              <lineWrap value="true"/>
+              <rows value="0"/>
+              <wrapStyleWord value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

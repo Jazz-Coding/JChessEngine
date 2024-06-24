@@ -7,6 +7,16 @@ The engine also exposes many of its internal settings that can be freely played 
 
 ![java_H6WW7rM1Wh](https://github.com/Jazz-Coding/JChessEngine/assets/52354702/24edc2c4-f846-46f7-af3b-9cda244dbdd0)
 
+
+An example game against the engine (I lost):
+
+
+https://github.com/Jazz-Coding/JChessEngine/assets/52354702/187e120a-62f1-49e5-a819-c0cc59bdf547
+
+
+
+
+
 ## Setting Breakdown
 <details>
   <summary>Depth Limit</summary>
